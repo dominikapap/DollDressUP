@@ -1,0 +1,40 @@
+#container{
+    position: absolute;
+    margin: auto;
+    height:1024px;
+    width:1424px;
+    background-color: transparent;
+}
+
+#background{
+    position:absolute;
+    height:1024px;
+    width:1024px;
+    left:200px;
+    right:200px;
+    background-image: url('1215.jpg');
+}
+
+#hairback, #hairfront, #face, #body, #shoes{
+    position: absolute;
+    height:1024px;
+    width:1024px;
+}
+
+#hairback{
+    background-image: url('hair/backhair3.png');
+}
+
+#hairfront{
+    background-image: url('hair/fronthair3.png');
+}
+#face{
+    background-image: url('face/face6.png');
+}
+#body{
+    width:1024px;
+    background-image: url('body/body5.png');
+}
+#shoes{
+    background-image: url('shoes/shoes3.png');
+}
