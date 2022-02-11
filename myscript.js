@@ -8,7 +8,7 @@ function changeItem(idName, imgPath, direction){
 
     if (direction == 'next'){
         var imgNum=parseInt(bgImage[bgImage.length-7])+1
-        /*changing image source url */
+        /*changing image source url, there are 6 files for each option */
         if (imgNum<7){
             var urlNum=`${imgPath}`+imgNum+'.png'
             element.setAttribute("style", `background-image:url(${urlNum})`);
