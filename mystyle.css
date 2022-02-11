@@ -1,31 +1,42 @@
+bofy{
+    font-family: 'Open Sans', sans-serif;
+}
+
 #container{
     position: absolute;
     margin: auto;
     height:1024px;
-    width:1424px;
+    width:2624px;
     background-color: transparent;
+    display:flex;
 }
 
 #background{
     position:absolute;
     height:1024px;
     width:1024px;
-    left:200px;
-    right:200px;
+    left:800px;
+    right:800px;
     background-image: url('1215.jpg');
 }
+h1{
+    position:absolute;
+    left:25%;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    font-size: 3.5rem;
+}
 
-#hairback, #hairfront, #face, #body, #shoes{
+#backhair, #fronthair, #face, #body, #shoes{
     position: absolute;
     height:1024px;
     width:1024px;
 }
 
-#hairback{
+#backhair{
     background-image: url('hair/backhair3.png');
 }
 
-#hairfront{
+#fronthair{
     background-image: url('hair/fronthair3.png');
 }
 #face{
@@ -37,4 +48,33 @@
 }
 #shoes{
     background-image: url('shoes/shoes3.png');
+}
+
+.btn-control{
+    position: absolute;
+    padding: 5px 10px 5px 10px;
+}
+
+#nexthair, #nextface, #nextbody, #nextshoes{
+    right:20%
+}
+
+#prevhair, #prevface, #prevbody, #prevshoes{
+    left:20%;
+}
+
+#nexthair, #prevhair{
+    top:22%;
+}
+
+#nextface, #prevface{
+    top:33%;
+}
+
+#nextbody, #prevbody{
+    top:55%;
+}
+
+#nextshoes, #prevshoes{
+    bottom: 10%;
 }
