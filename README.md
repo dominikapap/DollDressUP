@@ -5,11 +5,8 @@ Images are not hosted on Netlify so first loading is a bit sluggish.
 
 ## Technologies
 Project is created with:
-* Python 3.9.7
-* Django 3.2.5
 * HTML5
 * CSS
-* Bootstrap 5
 * Javascript
 
 
