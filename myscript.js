@@ -2,36 +2,25 @@
 
 
 function changeItem(idName, imgPath, direction){
-    /*checking which image file is currently displayed */
-    const element = document.getElementById(`${idName}`)
-    const bgImage= getComputedStyle(element).backgroundImage
+    let element = document.getElementById(`${idName}`);
+    let bgImage= getComputedStyle(element).backgroundImage;
+    let offset = {"next":1, "prev":-1};
+    let currImgNum= parseInt(bgImage[bgImage.length-7]); /*gets img number from url*/
+    let newImgNum = currImgNum + offset[direction];/*change displayed img */
+    let maxImgsCount = 6;
+        
+    if (newImgNum < 1){
+        newImgNum = maxImgsCount;
+    };
 
-    if (direction == 'next'){
-        var imgNum=parseInt(bgImage[bgImage.length-7])+1
-        /*changing image source url, there are 6 files for each option */
-        if (imgNum<7){
-            var urlNum=`${imgPath}`+imgNum+'.png'
-            element.setAttribute("style", `background-image:url(${urlNum})`);
-        }
-        else {
-            imgNum = 1
-            var urlNum=`${imgPath}`+imgNum+'.png'
-            element.setAttribute("style", `background-image:url(${urlNum})`);
-        }
-    }else if(direction == 'prev'){
-        var imgNum=parseInt(bgImage[bgImage.length-7])-1
-        if (imgNum>1){
-            const urlNum=`${imgPath}`+imgNum+'.png'
-            element.setAttribute("style", `background-image:url(${urlNum})`);
-        }
-        else {
-            imgNum = 6
-            var urlNum=`${imgPath}`+imgNum+'.png'
-            element.setAttribute("style", `background-image:url(${urlNum})`);
-        }
-    }
-    
-}
+    if (newImgNum > maxImgsCount){
+        newImgNum = 1;
+    };
+        
+    let urlNum=`${imgPath}`+newImgNum+'.png';
+    element.setAttribute("style", `background-image:url(${urlNum})`);
+};
+
 
 /*for later use
 

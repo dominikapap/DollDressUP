@@ -6,8 +6,8 @@ Images are not hosted on Netlify so first loading is a bit sluggish.
 ## Technologies
 Project is created with:
 * HTML5
-* CSS
-* Javascript
+* CSS3
+* JavaScript
 
 
 ## Sources
