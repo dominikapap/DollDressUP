@@ -34,11 +34,11 @@ h1{
 }
 
 #backhair{
-    background-image: url('hair/backhair3.png');
+    background-image: url('backhair/backhair3.png');
 }
 
 #fronthair{
-    background-image: url('hair/fronthair3.png');
+    background-image: url('fronthair/fronthair3.png');
 }
 #face{
     background-image: url('face/face6.png');
@@ -53,6 +53,12 @@ h1{
 .btn-control{
     position: absolute;
     padding: 5px 10px 5px 10px;
+}
+.btn-random{
+    position: absolute;
+    padding: 8px;
+    bottom:4%;
+    left:45%;
 }
 
 #nexthair, #nextface, #nextbody, #nextshoes{
