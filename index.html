@@ -17,45 +17,125 @@
 </head>
 
 <body>
+    <section id="main">
 
-    <div id="container">
-        <div id="background" class="container text-center">
-            <h1 class="text-primary mt-5 ">CHOOSE YOUR LOOK</h1>
-            <div id="backhair"></div>
-            <div id="face"></div>
-            <div id="body"></div>
-            <div id="shoes"></div>
-            <div id="fronthair"></div>
 
-            <button class='btn btn-lg btn-primary btn-control' id='nexthair'
-                onclick="changeItem('fronthair', 'fronthair/fronthair', 'next');changeItem('backhair', 'backhair/backhair', 'next')">
-                <i class="fas fa-arrow-alt-circle-right"></i></span></button>
-            <button class='btn btn-lg btn-primary btn-control' id='prevhair'
-                onclick="changeItem('fronthair', 'fronthair/fronthair', 'prev');changeItem('backhair', 'backhair/backhair', 'prev')">
-                <i class="fas fa-arrow-alt-circle-left"></i></button>
+        <div id="game-container" class="container">
 
-            <button class='btn btn-lg btn-primary btn-control' id='nextface'
-                onclick="changeItem('face', 'face/face', 'next')"><i class="fas fa-arrow-alt-circle-right"></i></button>
-            <button class='btn btn-lg btn-primary btn-control' id='prevface'
-                onclick="changeItem('face', 'face/face', 'prev')"><i class="fas fa-arrow-alt-circle-left"></i></button>
 
-            <button class='btn btn-lg btn-primary btn-control' id='nextbody'
-                onclick="changeItem('body', 'body/body', 'next')"><i class="fas fa-arrow-alt-circle-right"></i></button>
-            <button class='btn btn-lg btn-primary btn-control' id='prevbody'
-                onclick="changeItem('body', 'body/body', 'prev')"><i class="fas fa-arrow-alt-circle-left"></i></button>
+            <div id="background" class=" text-center">
 
-            <button class='btn btn-lg btn-primary btn-control' id='nextshoes'
-                onclick="changeItem('shoes', 'shoes/shoes', 'next')"><i
-                    class="fas fa-arrow-alt-circle-right"></i></button>
-            <button class='btn btn-lg btn-primary btn-control' id='prevshoes'
-                onclick="changeItem('shoes', 'shoes/shoes', 'prev')"><i
-                    class="fas fa-arrow-alt-circle-left"></i></button>
 
-            <button class="btn btn-lg btn-primary btn-random" onclick="randomize()">RANDOMIZE</button>
+                <div class="left-side-buttons ">
+                    <div class="mt-5">
+                        <button class="tall-btn" onclick="chooseItem('body', 1)"><img src="button_icons/bodyicon1.png"
+                                alt="body option 1"></button>
+                        <button class="tall-btn" onclick="chooseItem('body', 2)"><img src="button_icons/bodyicon2.png"
+                                alt="body option 2"></button>
+                    </div>
+
+                    <div>
+                        <button class="tall-btn" onclick="chooseItem('body', 3)"><img src="button_icons/bodyicon3.png"
+                                alt="body option 3"></button>
+                        <button class="tall-btn" onclick="chooseItem('body', 4)"><img src="button_icons/bodyicon4.png"
+                                alt="body option 4"></button>
+                    </div>
+                    <div><button class="tall-btn" onclick="chooseItem('body', 5)"><img src="button_icons/bodyicon5.png"
+                                alt="body option 5"></button>
+                        <button class="tall-btn" onclick="chooseItem('body', 6)"><img src="button_icons/bodyicon6.png"
+                                alt="body option 6"></button>
+                    </div>
+                </div>
+
+                <h1 class="text-primary mt-5 ">CHOOSE YOUR LOOK</h1>
+                <div id="backhair"></div>
+                <div id="face"></div>
+                <div id="body"></div>
+                <div id="shoes"></div>
+                <div id="fronthair"></div>
+
+                <button class='btn btn-lg btn-primary btn-control' id='nexthair'
+                    onclick="changeItem('fronthair', 'fronthair/fronthair', 'next');changeItem('backhair', 'backhair/backhair', 'next')">
+                    <i class="fas fa-arrow-alt-circle-right"></i></span></button>
+                <button class='btn btn-lg btn-primary btn-control' id='prevhair'
+                    onclick="changeItem('fronthair', 'fronthair/fronthair', 'prev');changeItem('backhair', 'backhair/backhair', 'prev')">
+                    <i class="fas fa-arrow-alt-circle-left"></i></button>
+
+                <button class='btn btn-lg btn-primary btn-control' id='nextface'
+                    onclick="changeItem('face', 'face/face', 'next')"><i
+                        class="fas fa-arrow-alt-circle-right"></i></button>
+                <button class='btn btn-lg btn-primary btn-control' id='prevface'
+                    onclick="changeItem('face', 'face/face', 'prev')"><i
+                        class="fas fa-arrow-alt-circle-left"></i></button>
+
+                <button class='btn btn-lg btn-primary btn-control' id='nextbody'
+                    onclick="changeItem('body', 'body/body', 'next')"><i
+                        class="fas fa-arrow-alt-circle-right"></i></button>
+                <button class='btn btn-lg btn-primary btn-control' id='prevbody'
+                    onclick="changeItem('body', 'body/body', 'prev')"><i
+                        class="fas fa-arrow-alt-circle-left"></i></button>
+
+                <button class='btn btn-lg btn-primary btn-control' id='nextshoes'
+                    onclick="changeItem('shoes', 'shoes/shoes', 'next')"><i
+                        class="fas fa-arrow-alt-circle-right"></i></button>
+                <button class='btn btn-lg btn-primary btn-control' id='prevshoes'
+                    onclick="changeItem('shoes', 'shoes/shoes', 'prev')"><i
+                        class="fas fa-arrow-alt-circle-left"></i></button>
+
+                <button class="btn btn-lg btn-primary btn-random" onclick="randomize()">RANDOMIZE</button>
+
+                <div class="right-side-buttons container mt-5">
+                    <div class="col "><button class="tall-btn"
+                            onclick="chooseItem('fronthair', 1);chooseItem('backhair', 1)"><img
+                                src="button_icons/hairicon1.png" alt="hair option 1"></button>
+                        <button class="tall-btn" onclick="chooseItem('fronthair', 2);chooseItem('backhair', 2)"><img
+                                src="button_icons/hairicon2.png" alt="hair option 2"></button>
+                        <button class="tall-btn" onclick="chooseItem('fronthair', 3);chooseItem('backhair', 3)"><img
+                                src="button_icons/hairicon3.png" alt="hair option 3"></button>
+                    </div>
+                    <div class="col"><button class="tall-btn"
+                            onclick="chooseItem('fronthair', 4);chooseItem('backhair', 4)"><img
+                                src="button_icons/hairicon4.png" alt="hair option 4"></button>
+                        <button class="tall-btn" onclick="chooseItem('fronthair', 5);chooseItem('backhair', 5)"><img
+                                src="button_icons/hairicon5.png" alt="hair option 5"></button>
+                        <button class="tall-btn" onclick="chooseItem('fronthair', 6);chooseItem('backhair',6)"><img
+                                src="button_icons/hairicon6.png" alt="hair option 6"></button>
+                    </div>
+                    <div class="col"><button class="tall-btn" onclick="chooseItem('face', 1)"><img
+                                src="button_icons/faceicon1.png" alt="face option 1"></button>
+                        <button class="tall-btn" onclick="chooseItem('face', 2)"><img src="button_icons/faceicon2.png"
+                                alt="face option 2"></button>
+                        <button class="tall-btn" onclick="chooseItem('face', 3)"><img src="button_icons/faceicon3.png"
+                                alt="face option 3"></button>
+                    </div>
+                    <div class="col"><button class="tall-btn" onclick="chooseItem('face', 4)"><img
+                                src="button_icons/faceicon4.png" alt="face option 4"></button>
+                        <button class="tall-btn" onclick="chooseItem('face', 5)"><img src="button_icons/faceicon5.png"
+                                alt="face option 5"></button>
+                        <button class="tall-btn" onclick="chooseItem('face', 6)"><img src="button_icons/faceicon6.png"
+                                alt="face option 6"></button>
+                    </div>
+                    <div class="col"><button class="tall-btn" onclick="chooseItem('shoes', 1)"><img
+                                src="button_icons/shoesicon1.png" alt="shoes option 1"></button>
+                        <button class="tall-btn" onclick="chooseItem('shoes', 2)"><img src="button_icons/shoesicon2.png"
+                                alt="shoes option 2"></button>
+                        <button class="tall-btn" onclick="chooseItem('shoes', 3)"><img src="button_icons/shoesicon3.png"
+                                alt="shoes option 3"></button>
+                    </div>
+                    <div class="col"><button class="tall-btn" onclick="chooseItem('shoes', 4)"><img
+                                src="button_icons/shoesicon4.png" alt="shoes option 4"></button>
+                        <button class="tall-btn" onclick="chooseItem('shoes', 5)"><img src="button_icons/shoesicon5.png"
+                                alt="shoes option 5"></button>
+                        <button class="tall-btn" onclick="chooseItem('shoes', 6)"><img src="button_icons/shoesicon6.png"
+                                alt="shoes option 6"></button>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
 
-    </div>
+    </section>
 
     <script src="myscript.js"></script>
 </body>
