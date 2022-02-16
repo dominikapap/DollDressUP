@@ -41,6 +41,13 @@ function randomize(){
     }
 }
 
+function chooseItem(idName, imgNum){
+    let element = document.getElementById(`${idName}`);
+    let url=`${idName}/${idName}`+imgNum+'.png';
+    element.setAttribute("style", `background-image:url(${url})`);
+    console.log(url);
+}
+
 /*for later use
 
 function changeHair(i){
