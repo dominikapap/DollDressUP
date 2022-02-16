@@ -2,35 +2,41 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
-#container{
-    position: absolute;
+
+#main{
+   
+    background-repeat:space
+}
+
+#game-container{
     margin: auto;
-    height:1024px;
-    width:2624px;
+    height:2024px;
+    width:100%;
     background-color: transparent;
-    display:flex;
 }
 
 #background{
     position:absolute;
     height:1024px;
-    width:1024px;
-    left:800px;
-    right:800px;
-    background-image: url('1215.jpg');
+    width:1624px;
+    border: solid blue;
+    background-image: url('backgroundimg.jpg');
 }
 
 h1{
     position:absolute;
-    left:25%;
+    left:33%;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 #backhair, #fronthair, #face, #body, #shoes{
     position: absolute;
+    left:480px;
     height:1024px;
-    width:1024px;
+    width:624px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #backhair{
@@ -39,6 +45,7 @@ h1{
 
 #fronthair{
     background-image: url('fronthair/fronthair3.png');
+
 }
 #face{
     background-image: url('face/face6.png');
@@ -53,20 +60,24 @@ h1{
 .btn-control{
     position: absolute;
     padding: 5px 10px 5px 10px;
+    border: solid white;
+    border-radius: 25px;
 }
 .btn-random{
     position: absolute;
-    padding: 8px;
-    bottom:4%;
+    border: solid white;
+    border-radius: 15px;
+    padding: 10px;
+    bottom:2%;
     left:45%;
 }
 
 #nexthair, #nextface, #nextbody, #nextshoes{
-    right:20%
+    right:35%
 }
 
 #prevhair, #prevface, #prevbody, #prevshoes{
-    left:20%;
+    left:35%;
 }
 
 #nexthair, #prevhair{
@@ -83,4 +94,22 @@ h1{
 
 #nextshoes, #prevshoes{
     bottom: 10%;
+}
+
+.right-side-buttons{
+    position:absolute;
+    left:1130px;
+    width: fit-content;
+}
+.left-side-buttons{
+    position:absolute;
+    left:100px;
+}
+
+.tall-btn{
+    margin: 8px;
+    border: solid blue;
+    border-radius: 10px;
+    padding-left:0;
+    padding-right:0;
 }
