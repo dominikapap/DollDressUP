@@ -2,142 +2,145 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dress Up</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link rel="stylesheet" href="mystyle.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dress Up</title>
+        <link rel="shortcut icon" type="image/jpg" href="favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+                crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+                integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+                crossorigin="anonymous">
+        <link rel="stylesheet" href="mystyle.css">
 </head>
 
+
 <body>
-    <section id="main">
+        <section class=" d-flex main-section">
+                <div class="col left-side-buttons ">
+                        <div class="mt-5 body-btn">
+                                <img class="img-btn" src="button_icons/bodyicon1.png" alt="body option 1"
+                                        onclick="chooseItem('body', 1)">
+                                <img class="img-btn" src="button_icons/bodyicon2.png" alt="body option 2"
+                                        onclick="chooseItem('body', 2)">
+                        </div>
 
+                        <div class=" body-btn">
+                                <img class="img-btn" src="button_icons/bodyicon3.png" alt="body option 3"
+                                        onclick="chooseItem('body', 3)">
+                                <img class="img-btn" src="button_icons/bodyicon4.png" alt="body option 4"
+                                        onclick="chooseItem('body', 4)">
+                        </div>
+                        <div class=" body-btn">
+                                <img class="img-btn" src="button_icons/bodyicon5.png" alt="body option 5"
+                                        onclick="chooseItem('body', 5)">
+                                <img class="img-btn" src="button_icons/bodyicon6.png" alt="body option 6"
+                                        onclick="chooseItem('body', 6)">
+                        </div>
+                </div>
+                <div class="col center-doll background">
+                        <h1 class=" text-center mt-5 ">CHOOSE YOUR LOOK</h1>
+                        <div id="doll">
+                                <div id="backhair"></div>
+                                <div id="face"></div>
+                                <div id="body"></div>
+                                <div id="shoes"></div>
+                                <div id="fronthair"></div>
+                        </div>
 
-        <div id="game-container" class="container">
+                        <div class="next-prev-btns">
 
+                                <button class='btn btn-lg btn-control' id='nexthair'
+                                        onclick="changeItem('fronthair', 'fronthair/fronthair', 'next');changeItem('backhair', 'backhair/backhair', 'next')">
+                                        <i class="fas fa-arrow-alt-circle-right"></i></span></button>
+                                <button class='btn btn-lg btn-control' id='prevhair'
+                                        onclick="changeItem('fronthair', 'fronthair/fronthair', 'prev');changeItem('backhair', 'backhair/backhair', 'prev')">
+                                        <i class="fas fa-arrow-alt-circle-left"></i></button>
 
-            <div id="background" class=" text-center">
+                                <button class='btn btn-lg btn-control' id='nextface'
+                                        onclick="changeItem('face', 'face/face', 'next')"><i
+                                                class="fas fa-arrow-alt-circle-right"></i></button>
+                                <button class='btn btn-lg btn-control' id='prevface'
+                                        onclick="changeItem('face', 'face/face', 'prev')"><i
+                                                class="fas fa-arrow-alt-circle-left"></i></button>
 
+                                <button class='btn btn-lg btn-control' id='nextbody'
+                                        onclick="changeItem('body', 'body/body', 'next')"><i
+                                                class="fas fa-arrow-alt-circle-right"></i></button>
+                                <button class='btn btn-lg btn-control' id='prevbody'
+                                        onclick="changeItem('body', 'body/body', 'prev')"><i
+                                                class="fas fa-arrow-alt-circle-left"></i></button>
 
-                <div class="left-side-buttons ">
-                    <div class="mt-5">
-                        <button class="tall-btn" onclick="chooseItem('body', 1)"><img src="button_icons/bodyicon1.png"
-                                alt="body option 1"></button>
-                        <button class="tall-btn" onclick="chooseItem('body', 2)"><img src="button_icons/bodyicon2.png"
-                                alt="body option 2"></button>
-                    </div>
+                                <button class='btn btn-lg btn-control' id='nextshoes'
+                                        onclick="changeItem('shoes', 'shoes/shoes', 'next')"><i
+                                                class="fas fa-arrow-alt-circle-right"></i></button>
+                                <button class='btn btn-lg btn-control' id='prevshoes'
+                                        onclick="changeItem('shoes', 'shoes/shoes', 'prev')"><i
+                                                class="fas fa-arrow-alt-circle-left"></i></button>
+                        </div>
 
-                    <div>
-                        <button class="tall-btn" onclick="chooseItem('body', 3)"><img src="button_icons/bodyicon3.png"
-                                alt="body option 3"></button>
-                        <button class="tall-btn" onclick="chooseItem('body', 4)"><img src="button_icons/bodyicon4.png"
-                                alt="body option 4"></button>
-                    </div>
-                    <div><button class="tall-btn" onclick="chooseItem('body', 5)"><img src="button_icons/bodyicon5.png"
-                                alt="body option 5"></button>
-                        <button class="tall-btn" onclick="chooseItem('body', 6)"><img src="button_icons/bodyicon6.png"
-                                alt="body option 6"></button>
-                    </div>
+                        <button class="btn btn-lg btn-random" onclick="randomize()">RANDOMIZE</button>
+
+                </div>
+                <div class="col right-side-buttons ">
+                        <div class="body-btn mt-5">
+                                <img class="img-btn img-fluid" src="button_icons/hairicon1.png" alt="hair option 1"
+                                        onclick="chooseItem('fronthair', 1);chooseItem('backhair', 1)">
+                                <img class="img-btn" src="button_icons/hairicon2.png" alt="hair option 2"
+                                        onclick="chooseItem('fronthair', 2);chooseItem('backhair', 2)">
+                                <img class="img-btn" src="button_icons/hairicon3.png" alt="hair option 3"
+                                        onclick="chooseItem('fronthair', 3);chooseItem('backhair', 3)">
+                        </div>
+                        <div class="body-btn">
+                                <img class="img-btn" src="button_icons/hairicon4.png" alt="hair option 4"
+                                        onclick="chooseItem('fronthair', 4);chooseItem('backhair', 4)">
+                                <img class="img-btn" src="button_icons/hairicon5.png" alt="hair option 5"
+                                        onclick="chooseItem('fronthair', 5);chooseItem('backhair', 5)">
+                                <img class="img-btn" src="button_icons/hairicon6.png" alt="hair option 6"
+                                        onclick="chooseItem('fronthair', 6);chooseItem('backhair',6)">
+                        </div>
+                        <div class="body-btn">
+                                <img class="img-btn" src="button_icons/faceicon1.png" alt="face option 1"
+                                        onclick="chooseItem('face', 1)">
+                                <img class="img-btn" src="button_icons/faceicon2.png" alt="face option 2"
+                                        onclick="chooseItem('face', 2)">
+                                <img class="img-btn" src="button_icons/faceicon3.png" alt="face option 3"
+                                        onclick="chooseItem('face', 3)">
+                        </div>
+                        <div class="body-btn">
+                                <img class="img-btn" src="button_icons/faceicon4.png" alt="face option 4"
+                                        onclick="chooseItem('face', 4)">
+                                <img class="img-btn" src="button_icons/faceicon5.png" alt="face option 5"
+                                        onclick="chooseItem('face', 5)">
+                                <img class="img-btn" src="button_icons/faceicon6.png" alt="face option 6"
+                                        onclick="chooseItem('face', 6)">
+                        </div>
+                        <div class="body-btn">
+                                <img class="img-btn" src="button_icons/shoesicon1.png" alt="shoes option 1"
+                                        onclick="chooseItem('shoes', 1)">
+                                <img class="img-btn" src="button_icons/shoesicon2.png" alt="shoes option 2"
+                                        onclick="chooseItem('shoes', 2)">
+                                <img class="img-btn" src="button_icons/shoesicon3.png" alt="shoes option 3"
+                                        onclick="chooseItem('shoes', 3)">
+                        </div>
+                        <div class="body-btn">
+                                <img class="img-btn" src="button_icons/shoesicon4.png" alt="shoes option 4" 
+                                        onclick="chooseItem('shoes', 4)">
+                                <img class="img-btn" src="button_icons/shoesicon5.png" alt="shoes option 5"
+                                        onclick="chooseItem('shoes', 5)">
+                                <img class="img-btn" src="button_icons/shoesicon6.png" alt="shoes option 6"
+                                        onclick="chooseItem('shoes', 6)">
+                        </div>
+
                 </div>
 
-                <h1 class="text-primary mt-5 ">CHOOSE YOUR LOOK</h1>
-                <div id="backhair"></div>
-                <div id="face"></div>
-                <div id="body"></div>
-                <div id="shoes"></div>
-                <div id="fronthair"></div>
-
-                <button class='btn btn-lg btn-primary btn-control' id='nexthair'
-                    onclick="changeItem('fronthair', 'fronthair/fronthair', 'next');changeItem('backhair', 'backhair/backhair', 'next')">
-                    <i class="fas fa-arrow-alt-circle-right"></i></span></button>
-                <button class='btn btn-lg btn-primary btn-control' id='prevhair'
-                    onclick="changeItem('fronthair', 'fronthair/fronthair', 'prev');changeItem('backhair', 'backhair/backhair', 'prev')">
-                    <i class="fas fa-arrow-alt-circle-left"></i></button>
-
-                <button class='btn btn-lg btn-primary btn-control' id='nextface'
-                    onclick="changeItem('face', 'face/face', 'next')"><i
-                        class="fas fa-arrow-alt-circle-right"></i></button>
-                <button class='btn btn-lg btn-primary btn-control' id='prevface'
-                    onclick="changeItem('face', 'face/face', 'prev')"><i
-                        class="fas fa-arrow-alt-circle-left"></i></button>
-
-                <button class='btn btn-lg btn-primary btn-control' id='nextbody'
-                    onclick="changeItem('body', 'body/body', 'next')"><i
-                        class="fas fa-arrow-alt-circle-right"></i></button>
-                <button class='btn btn-lg btn-primary btn-control' id='prevbody'
-                    onclick="changeItem('body', 'body/body', 'prev')"><i
-                        class="fas fa-arrow-alt-circle-left"></i></button>
-
-                <button class='btn btn-lg btn-primary btn-control' id='nextshoes'
-                    onclick="changeItem('shoes', 'shoes/shoes', 'next')"><i
-                        class="fas fa-arrow-alt-circle-right"></i></button>
-                <button class='btn btn-lg btn-primary btn-control' id='prevshoes'
-                    onclick="changeItem('shoes', 'shoes/shoes', 'prev')"><i
-                        class="fas fa-arrow-alt-circle-left"></i></button>
-
-                <button class="btn btn-lg btn-primary btn-random" onclick="randomize()">RANDOMIZE</button>
-
-                <div class="right-side-buttons container mt-5">
-                    <div class="col "><button class="tall-btn"
-                            onclick="chooseItem('fronthair', 1);chooseItem('backhair', 1)"><img
-                                src="button_icons/hairicon1.png" alt="hair option 1"></button>
-                        <button class="tall-btn" onclick="chooseItem('fronthair', 2);chooseItem('backhair', 2)"><img
-                                src="button_icons/hairicon2.png" alt="hair option 2"></button>
-                        <button class="tall-btn" onclick="chooseItem('fronthair', 3);chooseItem('backhair', 3)"><img
-                                src="button_icons/hairicon3.png" alt="hair option 3"></button>
-                    </div>
-                    <div class="col"><button class="tall-btn"
-                            onclick="chooseItem('fronthair', 4);chooseItem('backhair', 4)"><img
-                                src="button_icons/hairicon4.png" alt="hair option 4"></button>
-                        <button class="tall-btn" onclick="chooseItem('fronthair', 5);chooseItem('backhair', 5)"><img
-                                src="button_icons/hairicon5.png" alt="hair option 5"></button>
-                        <button class="tall-btn" onclick="chooseItem('fronthair', 6);chooseItem('backhair',6)"><img
-                                src="button_icons/hairicon6.png" alt="hair option 6"></button>
-                    </div>
-                    <div class="col"><button class="tall-btn" onclick="chooseItem('face', 1)"><img
-                                src="button_icons/faceicon1.png" alt="face option 1"></button>
-                        <button class="tall-btn" onclick="chooseItem('face', 2)"><img src="button_icons/faceicon2.png"
-                                alt="face option 2"></button>
-                        <button class="tall-btn" onclick="chooseItem('face', 3)"><img src="button_icons/faceicon3.png"
-                                alt="face option 3"></button>
-                    </div>
-                    <div class="col"><button class="tall-btn" onclick="chooseItem('face', 4)"><img
-                                src="button_icons/faceicon4.png" alt="face option 4"></button>
-                        <button class="tall-btn" onclick="chooseItem('face', 5)"><img src="button_icons/faceicon5.png"
-                                alt="face option 5"></button>
-                        <button class="tall-btn" onclick="chooseItem('face', 6)"><img src="button_icons/faceicon6.png"
-                                alt="face option 6"></button>
-                    </div>
-                    <div class="col"><button class="tall-btn" onclick="chooseItem('shoes', 1)"><img
-                                src="button_icons/shoesicon1.png" alt="shoes option 1"></button>
-                        <button class="tall-btn" onclick="chooseItem('shoes', 2)"><img src="button_icons/shoesicon2.png"
-                                alt="shoes option 2"></button>
-                        <button class="tall-btn" onclick="chooseItem('shoes', 3)"><img src="button_icons/shoesicon3.png"
-                                alt="shoes option 3"></button>
-                    </div>
-                    <div class="col"><button class="tall-btn" onclick="chooseItem('shoes', 4)"><img
-                                src="button_icons/shoesicon4.png" alt="shoes option 4"></button>
-                        <button class="tall-btn" onclick="chooseItem('shoes', 5)"><img src="button_icons/shoesicon5.png"
-                                alt="shoes option 5"></button>
-                        <button class="tall-btn" onclick="chooseItem('shoes', 6)"><img src="button_icons/shoesicon6.png"
-                                alt="shoes option 6"></button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-
-    </section>
-
-    <script src="myscript.js"></script>
+        </section>
+        <script src="myscript.js"></script>
 </body>
 
 </html>
