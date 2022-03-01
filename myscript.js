@@ -1,13 +1,11 @@
 
-
-
 function changeItem(idName, imgPath, direction){
-    let element = document.getElementById(`${idName}`);
-    let bgImage= getComputedStyle(element).backgroundImage;
-    let offset = {"next":1, "prev":-1};
-    let currImgNum= parseInt(bgImage[bgImage.length-7]); /*gets img number from url*/
+    const element = document.getElementById(`${idName}`);
+    const bgImage= getComputedStyle(element).backgroundImage;
+    const offset = {"next":1, "prev":-1};
+    const currImgNum= parseInt(bgImage[bgImage.length-7]); /*gets img number from url*/
     let newImgNum = currImgNum + offset[direction];/*change displayed img */
-    let maxImgNum = 6;
+    const maxImgNum = 6;
         
     if (newImgNum < 1){
         newImgNum = maxImgNum;
@@ -17,14 +15,14 @@ function changeItem(idName, imgPath, direction){
         newImgNum = 1;
     };
         
-    let url=`${imgPath}`+newImgNum+'.png';
+    const url=`${imgPath}`+newImgNum+'.png';
     element.setAttribute("style", `background-image:url(${url})`);
 };
 
 
 
 function randomize(){
-    var elList=[ "fronthair", "face", "body", "shoes"]
+    const elList=[ "fronthair", "face", "body", "shoes"]
 
     for(let i=0; i< elList.length; i++){
         let element = document.getElementById(elList[i]);
@@ -42,23 +40,10 @@ function randomize(){
 }
 
 function chooseItem(idName, imgNum){
-    let element = document.getElementById(`${idName}`);
-    let url=`${idName}/${idName}`+imgNum+'.png';
+    const element = document.getElementById(`${idName}`);
+    const url=`${idName}/${idName}`+imgNum+'.png';
     element.setAttribute("style", `background-image:url(${url})`);
     console.log(url);
 }
 
-/*for later use
 
-function changeHair(i){
-    let imageurl='hair/fronthair'+i+'.png'
-    let imageurl2='hair/backhair'+i+'.png'
-    document.getElementById('hairfront').setAttribute("style", `background-image:url(${imageurl})`);
-    document.getElementById('hairback').setAttribute("style", `background-image:url(${imageurl2})`);
-}
-
-function changeShoes(i){
-    let imgurlshoes='shoes/shoes'+i+'.png'
-    document.getElementById('shoes').setAttribute("style", `background-image:url(${imgurlshoes})`);
-}
-*/
