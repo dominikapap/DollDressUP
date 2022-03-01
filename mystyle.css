@@ -1,60 +1,59 @@
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Fredoka One', cursive;
 }
 
 
-#main{
-   
-    background-repeat:space
+
+.main-section{
+    background: url("backgroundimg.jpg");
+    background-size: cover;
+    min-height: 500px;
+    width: 1800px;
+    margin:0 auto;
+    transition: ease-out all 0.5s;
 }
 
-#game-container{
-    margin: auto;
-    height:2024px;
-    width:100%;
-    background-color: transparent;
-}
 
-#background{
-    position:absolute;
-    height:1024px;
-    width:1624px;
-    border: solid blue;
-    background-image: url('backgroundimg.jpg');
+.body-btn{
+    display: flex;
+    justify-content: center;
 }
 
 h1{
-    position:absolute;
-    left:33%;
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
     font-size: 3rem;
+    color: #66a6ff;
 }
 
+#backhair{
+    background-image: url('backhair/backhair1.png');
+}
+
+#fronthair{
+    background-image: url('fronthair/fronthair1.png');
+
+}
+#face{
+    background-image: url('face/face1.png');
+}
+#body{
+    background-image: url('body/body1.png');
+}
+#shoes{
+    background-image: url('shoes/shoes1.png');
+}
 #backhair, #fronthair, #face, #body, #shoes{
     position: absolute;
-    left:480px;
-    height:1024px;
-    width:624px;
+    top:0;
+    height:924px;
+    width:600px;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-#backhair{
-    background-image: url('backhair/backhair3.png');
-}
-
-#fronthair{
-    background-image: url('fronthair/fronthair3.png');
-
-}
-#face{
-    background-image: url('face/face6.png');
-}
-#body{
-    background-image: url('body/body5.png');
-}
-#shoes{
-    background-image: url('shoes/shoes3.png');
+.center-doll{
+    position: relative;
+    min-width: 600px;
 }
 
 .btn-control{
@@ -62,54 +61,102 @@ h1{
     padding: 5px 10px 5px 10px;
     border: solid white;
     border-radius: 25px;
+    color:white;
+    background-color:#6BBBFF;
+    transition: ease-in;
 }
+
 .btn-random{
     position: absolute;
-    border: solid white;
+    font-size: 1.8rem;
     border-radius: 15px;
-    padding: 10px;
-    bottom:2%;
-    left:45%;
+    padding: 13px;
+    bottom: 1%;
+    left:35%;
+    background-color:#6BBBFF;
+    color:white;
+}
+
+.btn-random:hover, .btn-control:hover{
+    background-color:#5D9FFF;
+    border-color: #5D9FFF;
+    transform: scale(1.1)
+}
+
+
+.next-prev-btns{
+    position: relative;
+    height: 100%;
+}
+
+img:hover{
+    cursor: pointer;
+    transform: scale(1.05)
 }
 
 #nexthair, #nextface, #nextbody, #nextshoes{
-    right:35%
+    right:6%;
 }
 
 #prevhair, #prevface, #prevbody, #prevshoes{
-    left:35%;
+    left:6%;
+    
 }
 
 #nexthair, #prevhair{
-    top:22%;
+    top:10%;
 }
 
 #nextface, #prevface{
-    top:33%;
+    top:20%;
 }
 
 #nextbody, #prevbody{
-    top:55%;
+    top:35%;
 }
 
 #nextshoes, #prevshoes{
-    bottom: 10%;
+    top: 70%;
 }
 
-.right-side-buttons{
-    position:absolute;
-    left:1130px;
-    width: fit-content;
-}
-.left-side-buttons{
-    position:absolute;
-    left:100px;
-}
 
-.tall-btn{
+
+.img-btn{
     margin: 8px;
-    border: solid blue;
-    border-radius: 10px;
+    border: solid #5D9FFF;
+    border-radius: 40px;
     padding-left:0;
     padding-right:0;
+    background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
 }
+
+
+@media all and (max-width: 1800px){
+    .main-section{
+        transform: scale(0.8);
+    }
+    body{
+        transform: translate(0,-10%);
+    }
+}
+
+
+@media all and (max-width: 1600px){
+    .main-section{
+        transform: scale(0.7);
+        margin-right: 10%;
+    }
+    body{
+        transform: translate(0,-15%);
+    }
+}
+
+@media all and (max-width: 1300px){
+    .main-section{
+        transform: scale(0.6);
+    }
+    body{
+        transform: translate(0,-20%);
+    }
+}
+
