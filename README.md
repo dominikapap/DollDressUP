@@ -7,15 +7,15 @@ Images are not hosted on Netlify so first loading is a bit sluggish.
 Project is created with:
 * HTML5
 * CSS3
-* JavaScript
+* JavaScript ES6
 
 
 ## Sources
 * doll elements, available for free https://gameassetsmarketplace.com/customize-girl_-type-0-401
-* background image https://pl.freepik.com/darmowe-wektory/pusty-pokoj-z-zamknietymi-drzwiami-i-pustymi-plakatami_7222507.htm#query=cartoon%20room&position=5&from_view=search 
+* background image https://pl.freepik.com/darmowe-wektory/abstrakcyjne-tlo-akwarela_17240325.htm#query=blue%20background&position=49&from_view=search
 
 ## Status
-* work in progress, for now there are just basic controls for next and previous option. I added some doll elements by myself. 
+* work in progress, mostly done, not yet responsive for all screen sizes, I will update that. I added some doll elements by myself. 
 
 ## Contact
 * domi.papierska@gmail.com
