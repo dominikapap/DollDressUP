@@ -8,8 +8,7 @@ body{
     background: url("backgroundimg.jpg");
     background-size: cover;
     min-height: 500px;
-    width: 1800px;
-    margin:0 auto;
+    min-width: 1500px;
     transition: ease-out all 0.5s;
 }
 
@@ -66,18 +65,22 @@ h1{
     transition: ease-in;
 }
 
-.btn-random{
+#btn-random, #btn-download{
     position: absolute;
     font-size: 1.8rem;
     border-radius: 15px;
     padding: 13px;
     bottom: 1%;
-    left:34%;
     background-color:#6BBBFF;
     color:white;
 }
-
-.btn-random:hover, .btn-control:hover{
+#btn-random{
+    left:14%;
+}
+#btn-download{
+    left:54%;
+}
+#btn-random:hover, #btn-download:hover, .btn-control:hover{
     background-color:#5D9FFF;
     border-color: #5D9FFF;
     transform: scale(1.1);
@@ -145,7 +148,7 @@ img:hover{
 @media all and (max-width: 1600px){
     .main-section{
         transform: scale(0.7);
-        margin-right: 10%;
+        margin-right: 20%;
     }
     body{
         transform: translate(0,-15%);
