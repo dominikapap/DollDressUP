@@ -21,7 +21,7 @@
 
 
 <body>
-        <section class=" d-flex main-section">
+        <section class=" d-flex main-section container">
                 <div class="col left-side-buttons ">
                         <div class="mt-5 body-btn">
                                 <img class="img-btn" src="button_icons/bodyicon1.png" alt="body option 1"
@@ -44,16 +44,16 @@
                         </div>
                 </div>
                 <div class="col center-doll background">
-                        <h1 class=" text-center mt-5 ">CHOOSE YOUR LOOK</h1>
+                        <h1 class=" text-center mt-5 nonCanvas">CHOOSE YOUR LOOK</h1>
                         <div id="doll">
-                                <div id="backhair"></div>
-                                <div id="face"></div>
-                                <div id="body"></div>
-                                <div id="shoes"></div>
-                                <div id="fronthair"></div>
+                                <div id="backhair" class="d"></div>
+                                <div id="face" class="d"></div>
+                                <div id="body" class="d"></div>
+                                <div id="shoes" class="d"></div>
+                                <div id="fronthair" class="d"></div>
                         </div>
 
-                        <div class="next-prev-btns">
+                        <div class="next-prev-btns nonCanvas">
 
                                 <button class='btn btn-lg btn-control' id='nexthair'
                                         onclick="changeItem('fronthair', 'fronthair/fronthair', 'next');changeItem('backhair', 'backhair/backhair', 'next')">
@@ -84,7 +84,8 @@
                                                 class="fas fa-arrow-alt-circle-left"></i></button>
                         </div>
 
-                        <button class="btn btn-lg btn-random" onclick="randomize()">RANDOMIZE</button>
+                        <button class="btn btn-lg nonCanvas" id="btn-random" onclick="randomize()">RANDOMIZE</button>
+                        <button class="btn btn-lg nonCanvas"id="btn-download" onclick="downloadPNG()">DOWNLOAD</button>
 
                 </div>
                 <div class="col right-side-buttons ">
@@ -140,7 +141,13 @@
                 </div>
 
         </section>
-        <script src="myscript.js"></script>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"></script>
+
+<script src="myscript.js"></script>
 </body>
 
 </html>
