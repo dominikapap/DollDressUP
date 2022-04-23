@@ -1,0 +1,189 @@
+body {
+  font-family: "Fredoka One", cursive;
+  background-color: #e8f1ff;
+}
+
+.main-section {
+  background: url("backgroundimg.jpg");
+  background-size: cover;
+  min-height: 500px;
+  min-width: 1500px;
+  transition: ease-out all 0.5s;
+  border: solid 5px #5d9fff;
+  padding-bottom: 16px;
+}
+
+.body-btn {
+  display: flex;
+  justify-content: center;
+}
+
+h1 span {
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-size: 2.5rem;
+  color: #66a6ff;
+  line-height: 150%;
+}
+.middle{
+    padding-top: 32px;
+}
+#btn-random {
+    font-size: 1.8rem;
+    border-radius: 15px;
+    padding: 8px 16px;
+    background-color: #6bbbff;
+    color: white;
+    
+}
+
+#backhair {
+  background-image: url("backhair/backhair1.png");
+}
+
+#fronthair {
+  background-image: url("fronthair/fronthair1.png");
+}
+#face {
+  background-image: url("face/face1.png");
+}
+#body {
+  background-image: url("body/body1.png");
+}
+#shoes {
+  background-image: url("shoes/shoes1.png");
+}
+#backhair,
+#fronthair,
+#face,
+#body,
+#shoes {
+  position: fixed;
+  height: 750px;
+  width: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.center-doll {
+  position: relative;
+  min-width: 600px;
+}
+
+.btn-control {
+  position: absolute;
+  padding: 5px 10px 5px 10px;
+  border: solid white;
+  border-radius: 25px;
+  color: white;
+  background-color: #6bbbff;
+  transition: ease-in;
+}
+
+#btn-download {
+  font-size: 1.8rem;
+  border-radius: 15px;
+  padding: 13px;
+  background-color: #6bbbff;
+  color: white;
+  position: absolute;
+  bottom: 1%;
+  left: 34%;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+#btn-random:hover,
+#btn-download:hover,
+.btn-control:hover {
+  background-color: #5d9fff;
+  border-color: #5d9fff;
+  transform: scale(1.1);
+  color: white;
+}
+
+.next-prev-btns {
+  position: relative;
+  height: 83%;
+}
+
+img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+#nexthair,
+#nextface,
+#nextbody,
+#nextshoes {
+  right: 6%;
+}
+
+#prevhair,
+#prevface,
+#prevbody,
+#prevshoes {
+  left: 6%;
+}
+
+#nexthair,
+#prevhair {
+  top: 5%;
+}
+
+#nextface,
+#prevface {
+  top: 18%;
+}
+
+#nextbody,
+#prevbody {
+  top: 40%;
+}
+
+#nextshoes,
+#prevshoes {
+  top: 80%;
+}
+
+.img-btn {
+  margin: 8px;
+  border: solid #5d9fff;
+  border-radius: 40px;
+  padding-left: 0;
+  padding-right: 0;
+  background-image: linear-gradient(
+    -225deg,
+    #5d9fff 0%,
+    #b8dcff 48%,
+    #6bbbff 100%
+  );
+}
+
+@media all and (max-width: 1800px) {
+  .main-section {
+    transform: scale(0.8);
+  }
+  body {
+    transform: translate(0, -10%);
+  }
+}
+
+@media all and (max-width: 1600px) {
+  .main-section {
+    transform: scale(0.7);
+    margin-right: 20%;
+  }
+  body {
+    transform: translate(0, -15%);
+  }
+}
+
+@media all and (max-width: 1300px) {
+  .main-section {
+    transform: scale(0.6);
+  }
+  body {
+    transform: translate(0, -20%);
+  }
+}
