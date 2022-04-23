@@ -49,7 +49,7 @@ function downloadImg() {
   //hide unwated elements of canvas
   let nonC = document.querySelectorAll(".nonCanvas");
   for (el of nonC) {
-    el.style.display = "none";
+    el.style.visibility = "hidden";
   }
   //create image
   html2canvas(document.querySelector(".center-doll")).then((canvas) => {
@@ -60,6 +60,6 @@ function downloadImg() {
 
   //show elements back again
   for (el of nonC) {
-    el.style.display = "block";
+    el.style.visibility = "visible";
   }
 }
