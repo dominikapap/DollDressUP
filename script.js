@@ -42,7 +42,6 @@ function chooseItem(idName, imgNum) {
   const element = document.getElementById(`${idName}`);
   const url = `${idName}/${idName}` + imgNum + ".png";
   element.setAttribute("style", `background-image:url(${url})`);
-  console.log(url);
 }
 
 function downloadImg() {
