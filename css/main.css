@@ -20,7 +20,7 @@ body {
   padding-right: 0;
   background-image: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
 }
-.main-section .body-btn {
+.main-section .bodyparts-btn {
   display: flex;
   justify-content: center;
 }
