@@ -1,7 +1,7 @@
 
 
 
-function changeItem(idName, imgPath, direction) {
+function changeItem(idName, direction) {
   const element = document.getElementById(`${idName}`);
   const bgImage = getComputedStyle(element).backgroundImage;
   const offset = { next: 1, prev: -1 };
@@ -19,7 +19,7 @@ function changeItem(idName, imgPath, direction) {
     newImgNum = 1;
   }
 
-  const url = `${imgPath}` + newImgNum + ".png";
+  const url = `${idName}` +'/'+`${idName}`+ newImgNum + ".png";
   element.setAttribute("style", `background-image:url(${url})`);
 }
 
@@ -93,4 +93,25 @@ for(let i=0; i<bodyBtns.length;i++){
     chooseItem("shoes",i+1);
   });
 }
+
+let controlBtns = document.querySelectorAll(".btn-control");
+let dollParts = ['fronthair','fronthair', 'face','face', 'body', 'body', 'shoes', 'shoes','backhair'];
+
+for (let i =0; i<controlBtns.length;i++){
+    if (i %2 === 0){
+      dir = 'next'
+    }else{
+      dir = 'prev'
+    };
+    if (i<2){
+      controlBtns[i].addEventListener("click",()=>{
+        changeItem(dollParts[i], dir);
+        changeItem(dollParts[dollParts.length-1], dir);
+      });
+  }else{
+      controlBtns[i].addEventListener("click",()=>{
+        changeItem(dollParts[i], dir);
+      });
+  };
+    }
 
