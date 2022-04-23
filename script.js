@@ -1,3 +1,6 @@
+
+
+
 function changeItem(idName, imgPath, direction) {
   const element = document.getElementById(`${idName}`);
   const bgImage = getComputedStyle(element).backgroundImage;
@@ -62,3 +65,32 @@ function downloadImg() {
     el.style.visibility = "visible";
   }
 }
+
+
+let btnRandom = document.getElementById("btn-random");
+btnRandom.addEventListener("click", randomize);
+let btnDownload = document.getElementById("btn-download");
+btnDownload.addEventListener("click", downloadImg);
+
+
+let bodyBtns = document.querySelectorAll(".body-btn");
+let hairBtns = document.querySelectorAll(".hair-btn");
+let faceBtns = document.querySelectorAll(".face-btn");
+let shoesBtns = document.querySelectorAll(".shoes-btn");
+
+for(let i=0; i<bodyBtns.length;i++){
+  hairBtns[i].addEventListener("click", ()=>{
+    chooseItem("fronthair",i+1);
+    chooseItem("backhair",i+1);
+  });
+  faceBtns[i].addEventListener("click", ()=>{
+    chooseItem("face",i+1);
+  });
+  bodyBtns[i].addEventListener("click", ()=>{
+    chooseItem("body",i+1);
+  });
+  shoesBtns[i].addEventListener("click", ()=>{
+    chooseItem("shoes",i+1);
+  });
+}
+
