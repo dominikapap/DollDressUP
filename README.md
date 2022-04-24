@@ -15,7 +15,7 @@ This is a simple dress up/doll customization game. User can choose specific part
 
 ### Screenshot
 
-![](/screenshots/screenshot.PNG)
+![](/screenshots/screenshot.png)
 
 ## Technologies
 Project is created with:
