@@ -30,7 +30,7 @@ Project is created with:
 * background image https://pl.freepik.com/darmowe-wektory/abstrakcyjne-tlo-akwarela_17240325.htm#query=blue%20background&position=49&from_view=search
 
 ## Status
-* work in progress, mostly done, not yet responsive for all screen sizes, I will update that. I added some doll elements by myself.
+* work in progress, mostly done, not yet responsive for all screen sizes, I'm in the process of updating that part. I added some doll elements by myself.
 
 ## Author
 
