@@ -8,6 +8,7 @@ main {
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  max-width: 100vw;
 }
 
 .main-section {
@@ -176,31 +177,8 @@ footer a:hover {
   color: white !important;
 }
 
-@media all and (max-width: 1800px) {
+@media (orientation: portrait) {
   main {
-    transform: scale(0.8);
-  }
-
-  body {
-    transform: translate(0, -10%);
-  }
-}
-@media all and (max-width: 1600px) {
-  main {
-    transform: scale(0.7);
-    margin-right: 20%;
-  }
-
-  body {
-    transform: translate(0, -15%);
-  }
-}
-@media all and (max-width: 1300px) {
-  main {
-    transform: scale(0.6);
-  }
-
-  body {
-    transform: translate(0, -20%);
+    transform: rotate(90deg);
   }
 }/*# sourceMappingURL=main.css.map */
