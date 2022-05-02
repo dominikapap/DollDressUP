@@ -1,10 +1,15 @@
-@use 'colors-and-mixin' as *;
+@use 'colors-and-mixins' as *;
 
 body {
   font-family: "Fredoka One", cursive;
   background-color: $primary-bg;
 }
-
+main{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
 .main-section {
   background: url("../backgroundimg.jpg");
   background-size: cover;
@@ -13,6 +18,8 @@ body {
   transition: ease-out all 0.5s;
   border: solid 5px $primary-borders;
   padding-bottom: 16px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 
   .img-btn {
     margin: 8px;
@@ -140,7 +147,7 @@ body {
 #face,
 #body,
 #shoes {
-  position: fixed;
+  position: absolute;
   height: 750px;
   width: 600px;
   background-repeat: no-repeat;
@@ -162,8 +169,32 @@ img:hover {
   transform: scale(1.05);
 }
 
+
+footer{
+  background-color:$primary-btn;
+  min-height: 50px;
+  display: flex;
+  min-width:1500px;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  a{color: white;
+    margin-right: 2rem;
+    &#mail{
+      margin-right: 0;
+    }
+    &:hover{
+      transform: scale(1.5);
+      color: white!important;
+    }
+  }
+
+}
+
 @media all and (max-width: 1800px) {
-  .main-section {
+  main {
     transform: scale(0.8);
   }
   body {
@@ -172,7 +203,7 @@ img:hover {
 }
 
 @media all and (max-width: 1600px) {
-  .main-section {
+  main {
     transform: scale(0.7);
     margin-right: 20%;
   }
@@ -182,7 +213,7 @@ img:hover {
 }
 
 @media all and (max-width: 1300px) {
-  .main-section {
+  main {
     transform: scale(0.6);
   }
   body {
